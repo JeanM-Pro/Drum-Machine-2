@@ -12,7 +12,7 @@ export const DrumMAchine2 = () => {
                 
                 <div className='pad-content'>
 
-
+                    {samples.map(AudioP)}
 
                 </div>
 
