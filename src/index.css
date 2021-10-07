@@ -4,7 +4,7 @@ body {
 }
 
 .content{
-  background-color: rgb(20, 175, 236);
+  background-color: rgb(95, 99, 100);
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -14,13 +14,14 @@ body {
 }
 
 #drum-machine{
-  background-color: rgb(107, 201, 245);
+  background-color: rgb(65, 66, 67);
   display: flex;
   height: 45%;
   width: 45%;
-  border: rgb(252, 181, 3) solid 5px;
+  border: rgb(10, 10, 10) solid 5px;
   justify-content: center;
   align-items: center;
+  border-radius: 0.8rem;
 }
 
 .pad-content{
@@ -36,7 +37,7 @@ body {
 .drum-pad{
   font-weight: bold;
   margin: 4px;
-  background-color: rgb(9, 212, 226);
+  background-color: rgb(85, 93, 197);
   border-radius: 0.5rem;
   box-shadow: 5px 5px 5px;
 }
@@ -55,11 +56,67 @@ body {
   box-sizing: border-box;
   height: 15%;
   width: 60%;
-  background-color: rgb(9, 212, 226);
+  background-color: rgb(85, 93, 197);
   justify-content: center;
   align-items: center;
   display: flex;
   border: black solid 2px;
   border-radius: 0.3rem;
   box-shadow: 2px 2px 5px;
+}
+
+@media (max-width: 968px){
+
+  #drum-machine{
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60%;
+    width: 60%;
+  }
+
+  .display-content{
+    height: 20%;
+  }
+
+  #display{
+    height: 60%;
+    width: 90%;
+  }
+
+}
+
+@media (max-width: 360px), (max-height: 640){
+  #drum-machine{
+    height: 70%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 375px), (max-height: 667){
+  #drum-machine{
+    height: 70%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 280px), (max-height: 653){
+ 
+  .pad-content{
+    width: 100%;
+    height: 65%;
+    grid-template-columns: repeat(3, 70px);
+  grid-template-rows: repeat(3, 70px);
+  }
+
+  #display{
+    width: 	100%;
+  }
+}
+
+@media (max-width: 432px){
+  .pad-content{
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+  }
 }
